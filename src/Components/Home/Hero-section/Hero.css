@@ -1,0 +1,308 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-content {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.hero-content.fade-in {
+    animation: fadeInLeft 0.8s ease both;
+}
+
+.hero-content.fade-out {
+    opacity: 0;
+}
+
+.hero-tag {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.15;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    color: #000000;
+    font-family: "Kalnia", serif;
+}
+
+.shop-btn,
+.more-btn {
+    font-size: 15px;
+    height: 50px;
+    padding: 0 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s, transform 0.2s;
+}
+
+.shop-btn {
+    color: #ffffff;
+    background: #e10914;
+}
+
+.shop-btn:hover {
+    background-color: #000000;
+}
+
+.more-btn {
+    color: #ffffff;
+    background: #000000;
+}
+
+.more-btn:hover {
+    background-color: #e10914;
+}
+
+.hero-counter {
+    position: absolute;
+    bottom: 80px;      
+    left: 48px;         
+    gap: 8px;
+    z-index: 3;
+}
+
+.counter-num {
+    font-size: 64px;
+    font-weight: 800;
+    color: #e10914;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+}
+
+.counter-bar {
+    width: 75px;
+    height: 5px;
+    background: #e10914;
+    border-radius: 2px;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1201px) {
+    .hero {
+        height: 75vh; 
+        background-size: cover;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .hero-counter {
+        left: 48px;
+        bottom: 70px; 
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        height: 80vh; 
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-title {
+        font-size: 44px;
+        line-height: 1.2;
+    }
+
+    .hero-counter {
+        left: 40px;
+        bottom: 60px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 70vh; 
+        background-size: cover; 
+        background-position: center;
+    }
+    .hero-title {
+        font-size: 38px;
+    }
+    .hero-counter {
+        left: 32px;
+        bottom: 50px;
+    }
+    .counter-num {
+        font-size: 54px;
+    }
+    .counter-bar {
+        width: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: none !important; 
+        height: auto; 
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column; 
+        justify-content: flex-start;
+        padding: 0 !important;
+        background-color: #ffffff;
+    }
+    .hero-mobile-image {
+        display: block !important; 
+        width: 100%;
+        height: 45vh; 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .hero-content {
+        width: 100%;
+        padding: 40px 24px; 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        background: #ffffff;
+        margin: 0 !important;
+        animation: fadeInLeft 0.8s ease both;
+    }
+
+    .hero-tag {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        margin-top: 0;
+        margin-bottom: 12px; 
+        color: #e10914;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+    .shop-btn, .more-btn {
+        padding: 0 30px;
+        font-size: 14px;
+        height: 46px;
+    }
+    .hero-counter {
+        display: none !important; 
+    }
+    .counter-num {
+        font-size: 44px;
+    }
+    .counter-bar {
+        width: 50px;
+        height: 4px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        background-image: none !important; 
+        height: 90vh; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: flex-start;
+        padding: 0 !important;
+        background-color: #fff; 
+    }
+
+    .hero-mobile-image {
+        width: 100%;
+        height: 90vh; 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 15px 20px 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        background: #fff;
+        margin: 0 !important;
+        animation: fadeInUp 0.8s ease both;
+    }
+
+    .hero-tag {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-top: -100px;   
+        margin-bottom: 8px; 
+        color: #e10914;
+    }
+
+    .hero-title {
+        font-size: 26px; 
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .shop-btn, .more-btn {
+        padding: 0 24px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .hero-counter {
+        display: none !important; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-mobile-image {
+        height: 50vh; 
+    }
+
+    .hero-content {
+        margin-top: 10px;
+    }
+    .hero-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .hero-buttons {
+        gap: 8px;
+    }
+
+    .shop-btn, .more-btn {
+        padding: 0 20px;
+        height: 42px;
+        font-size: 13px;
+    }
+}

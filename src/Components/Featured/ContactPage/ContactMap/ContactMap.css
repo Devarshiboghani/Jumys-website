@@ -1,0 +1,32 @@
+.contact-map-wrap {
+  width: 100%;
+  height: 700px;
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.contact-map-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  filter: grayscale(10%);
+  transition: filter 0.3s;
+}
+
+.contact-map-frame:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 1024px) {
+  .contact-map-wrap {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-map-frame {
+    height: 600px;
+  }
+}

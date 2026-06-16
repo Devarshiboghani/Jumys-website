@@ -1,0 +1,84 @@
+.stats-section {
+  width: 100%;
+  background: #f8eded;
+  padding: 60px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+}
+
+.stat-number {
+  font-size: 44px;
+  font-weight: 700;
+  color: #e10914;
+  font-family: "Kalnia", serif;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .stats-section {
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 60px;
+    column-gap: 100px;
+    row-gap: 50px;
+  }
+
+  .stat-number {
+    font-size: 48px;
+  }
+
+  .stat-item:nth-child(odd)::after {
+    content: "~~";
+    position: absolute;
+    right: -70px;
+    top: 20%;
+    font-family: "Kalnia", serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #e10914;
+  }
+}
+
+@media (min-width: 1201px) {
+  .stats-section {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 90px 40px;
+    gap: 24px;
+    margin: 0 auto;
+  }
+
+  .stat-number {
+    font-size: 50px;
+  }
+
+  .stat-item:not(:last-child)::after {
+    content: "~~";
+    position: absolute;
+    right: -24px;
+    top: 20%;
+    font-family: "Kalnia", serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #e10914;
+  }
+}

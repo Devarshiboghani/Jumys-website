@@ -1,0 +1,228 @@
+.about-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 60px 0 20px 0;
+    position: relative;
+}
+
+.about-heading {
+    font-size: 54px;
+    font-weight: 600;
+    color: #e10914;
+    line-height: 1.05;
+    font-family: 'Kalnia', serif;
+    min-width: 180px;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.about-text {
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #222222;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.read-more {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 2px solid #111111;
+    padding-bottom: 2px;
+    display: inline-block;
+    width: fit-content;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.read-more:hover {
+    color: #e10914;
+    border-color: #e10914;
+}
+
+.cup {
+    position: absolute;
+    right: -20px;      
+    bottom: -40px;     
+    z-index: 2;
+    pointer-events: none;
+}
+
+.cup img {
+    max-width: 120px;   
+    height: auto;
+}
+
+.about-heading {
+    font-size: clamp(40px, 3.8vw, 54px);
+    font-weight: 600;
+    color: #e10914;
+    line-height: 1.05;
+    font-family: 'Kalnia', serif;
+    min-width: 160px;   
+}
+
+.about-bottom-lines {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.dashed-line {
+    width: 100%;
+    height: 0;
+    border-top: 3px dashed #e10914;
+    opacity: 0.4;
+}
+
+.top-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: #e10914;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 999;
+}
+
+.top-btn:hover {
+    background: #000000;
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+.summer-section {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.summer-card {
+    cursor: pointer;
+    width: 100%; 
+}
+
+.summer-card img {
+    transition: transform 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.summer-card:hover img {
+    transform: scale(1.06);
+}
+
+.card-content h3 {
+    font-size: clamp(34px, 4vw, 55px);
+    font-family: 'Playball', cursive, sans-serif;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.card-content h1 {
+    font-family: "Kalnia", serif;
+    font-size: clamp(38px, 5vw, 68px);
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+@media (max-width: 1400px) {
+    .about-heading {
+        font-size: 42px;
+    }
+    
+    .about-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 38px;
+        min-width: 100%;
+    }
+    .about-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+    }
+    .summer-card {
+        max-width: 500px; 
+        margin: 0 auto;  
+    }
+}
+
+@media (max-width: 992px) {
+    .about-section {
+        padding: 20px 40px;
+    }
+    
+    .about-heading {
+        font-size: 38px;
+        min-width: 30%;
+    }
+    .about-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .about-heading br {
+        display: none;
+    }
+    .about-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-heading {
+        font-size: 30px;
+        text-align: center; 
+        margin-top: -80px;
+        word-spacing: 2px; 
+    }
+
+    .about-right {
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .read-more {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+}

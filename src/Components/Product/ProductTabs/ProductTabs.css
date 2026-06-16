@@ -1,0 +1,291 @@
+.tabs-section {
+  padding: 20px 80px 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding-bottom: 6px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Kalnia", serif;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.tab-btn.active {
+  color: #111;
+  border-bottom: 2px solid #111;
+}
+
+.tab-btn:hover:not(.active) {
+  color: #555;
+}
+
+.tab-divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 0 0 36px 0;
+}
+
+.tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab-pane {
+  display: block !important;
+  flex-direction: column;
+  min-height: 100px;
+  gap: 18px;
+  animation: fadeTab 0.3s ease;
+}
+
+.tab-pane p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.tab-pane p:last-child {
+  margin-bottom: 0;
+}
+
+.tab-text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+  display: block;
+}
+
+.return-list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.return-list li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.review-pane {
+  align-items: center;
+}
+
+.review-title {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Kalnia", serif;
+  color: #111;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.review-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.review-left {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star-empty {
+  font-size: 22px;
+  color: #e10914;
+}
+
+.review-sub {
+  font-size: 13px;
+  color: #888;
+}
+
+.review-divider {
+  width: 1px;
+  height: 80px;
+  background: #eee;
+}
+
+.review-right {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.write-review-btn {
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.write-review-btn:hover {
+  background: #e10914;
+}
+
+.mobile-accordion {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .tabs-header,
+  .tab-divider,
+  .tab-content {
+    display: none;
+  }
+
+  .mobile-accordion {
+    display: block;
+  }
+
+  .accordion-item {
+    margin-bottom: 12px;
+  }
+
+  .accordion-header {
+    width: 100%;
+    border: none;
+    background: #f5f5f5;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Kalnia", serif;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .accordion-body {
+    padding: 10px;
+    background: #fff;
+  }
+
+  .accordion-body p,
+  .accordion-body li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #717171;
+  }
+
+  .tabs-section {
+    padding: 20px;
+  }
+}
+
+.review-mobile {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.review-mobile-title {
+  font-family: "Kalnia", serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.review-mobile-stars {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.review-mobile-stars span {
+  font-size: 28px;
+  color: #e10914;
+}
+
+.review-mobile-text {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.review-mobile-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.review-mobile-btn:hover {
+  background: #e10914;
+}
+
+@keyframes fadeTab {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs-section {
+    padding: 20px 20px 40px;
+  }
+  .tabs-header {
+    gap: 24px;
+  }
+  .tab-btn {
+    font-size: 14px;
+  }
+  .review-box {
+    flex-direction: column;
+  }
+  .review-divider {
+    width: 100%;
+    height: 1px;
+  }
+}

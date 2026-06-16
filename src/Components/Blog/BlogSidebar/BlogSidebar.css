@@ -1,0 +1,171 @@
+.blog-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  font-family: "Kalnia", serif;
+}
+
+.sidebar-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 6px 10px;
+  gap: 6px;
+}
+.sidebar-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #2e2e2e;
+  background: transparent;
+}
+.sidebar-search input::placeholder {
+  color: #bbb;
+}
+.sidebar-search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.sidebar-search button:hover {
+  color: #e10914;
+}
+
+.sidebar-cat-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sidebar-cat-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  padding: 0;
+  transition: color 0.2s;
+}
+.sidebar-cat-btn:hover {
+  color: #e10914;
+}
+.sidebar-cat-btn.active {
+  color: #e10914;
+  font-weight: 600;
+}
+
+.sidebar-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-post-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.sidebar-post-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.sidebar-post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.sidebar-post-item:hover .sidebar-post-img img {
+  transform: scale(1.08);
+}
+
+.sidebar-post-info {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-post-date {
+  font-size: 14px;
+  color: #555;
+}
+.sidebar-post-title {
+  font-size: 16px;
+  color: #111;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+.sidebar-post-item:hover .sidebar-post-title {
+  color: #e10914;
+}
+.sidebar-post-comments {
+  font-size: 15px;
+  color: #555;
+}
+
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sidebar-tag {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+.sidebar-tag:hover {
+  border-color: #e10914;
+  color: #e10914;
+}
+
+@media (max-width: 992px) {
+  .blog-sidebar {
+    width: 100% !important;
+    flex-shrink: 1 !important;
+    flex: none !important;
+    display: block !important;
+    margin-top: 50px !important;
+  }
+
+  .sidebar-title {
+    margin-top: 30px;
+  }
+}

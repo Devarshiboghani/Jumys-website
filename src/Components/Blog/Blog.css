@@ -1,0 +1,20 @@
+.blog-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.blog-body {
+  display: flex;
+  gap: 50px;
+  padding: 40px 35px 80px 35px;
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .blog-body {
+    flex-direction: column;
+    padding: 30px 20px 60px;
+  }
+}

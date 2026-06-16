@@ -1,0 +1,25 @@
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  position: relative;
+}
+
+.contact-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #e10914;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  z-index: 999;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.2s;
+}
+.contact-top-btn:hover {
+  background: #000;
+}

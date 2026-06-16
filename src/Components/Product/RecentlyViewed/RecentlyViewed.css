@@ -1,0 +1,224 @@
+.rv-section {
+  padding: 30px 0px 30px 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.rv-title {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Kalnia", serif;
+  color: #111;
+  text-align: center;
+  margin-bottom: 38px;
+  letter-spacing: -0.5px;
+}
+
+.rv-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rv-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #ddd;
+  background: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+  color: #444;
+}
+.rv-arrow:hover:not(:disabled) {
+  border-color: #e10914;
+  color: #e10914;
+}
+.rv-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.rv-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.rv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.rv-img-box {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rv-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+.rv-card:hover .rv-img-box img {
+  transform: scale(1.06);
+}
+
+.rv-hover-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 3;
+}
+.rv-card:hover .rv-hover-icons {
+  opacity: 1;
+  transform: translateX(0);
+}
+.rv-hover-icons button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+.rv-hover-icons button:hover {
+  background: #e10914;
+  border-color: #e10914;
+  color: #fff;
+}
+
+.rv-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e10914;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 14px;
+  z-index: 2;
+}
+
+.rv-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.3;
+}
+
+.rv-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: -12px;
+}
+.rv-star {
+  color: #ddd;
+  font-size: 18px;
+}
+.rv-star.filled {
+  color: #e10914;
+}
+.rv-reviews {
+  font-size: 11px;
+  color: #888;
+  margin-left: 4px;
+}
+
+.rv-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rv-old {
+  font-size: 16px;
+  color: #aaa;
+}
+.rv-new {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.rv-colors {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.rv-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  display: inline-block;
+}
+.rv-more {
+  font-size: 11px;
+  color: #888;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .rv-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rv-section {
+    padding: 60px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .rv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rv-section {
+    padding: 70px 15px;
+  }
+
+  .rv-title {
+    font-size: 26px;
+  }
+
+  .rv-name {
+    font-size: 16px;
+  }
+}
